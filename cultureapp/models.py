@@ -53,7 +53,7 @@ class Booking(models.Model):
     mobile = models.IntegerField()
     plan = models.ForeignKey(visitplan, on_delete=models.CASCADE, default='')
     visit_choices = (
-        ('', 'Choose Vehicle Type'),
+        ('', 'Choose Visit Type'),
         ('One Person', 'One Person'),
         ('Two-Three People', 'Two-Three People'),
         ('Family Vacation', 'Family Vacation'),
@@ -61,7 +61,7 @@ class Booking(models.Model):
         ('Staff Get Together', 'Staff Get Together'),
         ('Filming', 'Filming'))
 
-    vehicle_type = models.CharField(
+    visit_type = models.CharField(
         choices=visit_choices, default=0, blank=False, max_length=50)
     appointment_date = models.CharField(max_length=30, blank=True)
 
