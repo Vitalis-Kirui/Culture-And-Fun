@@ -2,6 +2,77 @@ h1 {
     color: brown;
 }
 
+.landing {
+    background: url('/static/photos/culture.jpg') no-repeat fixed 100% 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0 auto;
+    flex-direction: column;
+    text-align: center;
+    background-position: center center;
+}
+
+#overlay {
+    top: 0;
+    bottom: 0;
+    padding-bottom: 30%;
+    padding-top: 12%;
+    font-size: 15pt;
+    background-color: rgba(51, 45, 45, 0.5);
+    color: white;
+}
+
+.aboutUs {
+    background-color: gold;
+    color: #11162c;
+    padding: 1.5%;
+}
+
+footer {
+    background-color: rgb(15, 15, 15);
+    padding-top: 2%;
+    color: gold;
+    overflow: hidden;
+    width: 100%;
+}
+
+.footerInfo {
+    padding-left: 10%
+}
+
+.footerInfo h5 {
+    font-size: 17px;
+    color: gold;
+}
+
+.footerInfo p {
+    font-size: 14px;
+}
+
+.copyright {
+    font-size: small;
+    padding-top: 3%;
+    padding-left: 0px;
+}
+
+.card {
+    margin: 2%;
+    text-align: center;
+    border: 1px solid rgb(230, 227, 227);
+    border-radius: 3%;
+}
+
+.card-title {
+    margin-bottom: 0.5rem;
+}
+
+.appointment {
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0 auto;
+    flex-direction: column;
+    background-position: center center;
+}
 
 #app_overlay {
     top: 0;
