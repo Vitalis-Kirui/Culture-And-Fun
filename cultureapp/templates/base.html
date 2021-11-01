@@ -19,8 +19,12 @@
 </head>
 
 <body>
+
+    {% include "navbar.html" %}
+
     {% block content %} 
     <h1 class='text-center'>Culture and Fun</h1> 
+    <hr>
     {%endblock%}
 
     {% block scripts %}
