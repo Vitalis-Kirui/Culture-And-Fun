@@ -36,3 +36,13 @@ class services(models.Model):
 
     def __str__(self):
         return self.service
+
+class visitplan(models.Model):
+    plan = models.CharField(max_length=50, blank=False)
+    price = models.IntegerField()
+    duration = models.CharField(max_length=50)
+    service = models.ManyToManyField(
+        services, related_name='services', null=True, blank=True)
+
+    def __str__(self):
+        return self.plan
