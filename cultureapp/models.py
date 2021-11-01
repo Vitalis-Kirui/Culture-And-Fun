@@ -46,3 +46,30 @@ class visitplan(models.Model):
 
     def __str__(self):
         return self.plan
+
+class Booking(models.Model):
+    user = models.ForeignKey(User,default='', on_delete=models.CASCADE)
+    email = models.CharField(max_length=30, blank=True)
+    mobile = models.IntegerField()
+    plan = models.ForeignKey(visitplan, on_delete=models.CASCADE, default='')
+    visit_choices = (
+        ('', 'Choose Vehicle Type'),
+        ('One Person', 'One Person'),
+        ('Two-Three People', 'Two-Three People'),
+        ('Family Vacation', 'Family Vacation'),
+        ('Educational ', 'Educational '),
+        ('Staff Get Together', 'Staff Get Together'),
+        ('Filming', 'Filming'))
+
+    vehicle_type = models.CharField(
+        choices=visit_choices, default=0, blank=False, max_length=50)
+    appointment_date = models.CharField(max_length=30, blank=True)
+
+    time_frame = (
+        ('', 'Choose Time Frame'),
+        ("Single Day", 'Single Day'),
+        ("Weekend(2-3 days)", 'Weekend(2-3 days)'),
+        ("One week(1+ week)", 'One week(1+ week)'))
+    timeframe = models.CharField(
+        choices=time_frame, default=0, blank=False, max_length=50)
+    created_date = models.DateTimeField(default=now, editable=False)
