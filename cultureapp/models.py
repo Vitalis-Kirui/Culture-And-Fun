@@ -14,3 +14,18 @@ class Profile(models.Model):
 
     def __str__(self):
         return self.user.username
+
+    @receiver(post_save, sender=User)
+    def update_user_profile(sender, instance, created, **kwargs):
+        if created:
+            Profile.objects.create(user=instance)
+        instance.profile.save()
+
+    def save_profile(self):
+        self.save()
+
+    def delete_profile(self):
+        self.delete()
+
+    def update_profile(cls, id):
+        Profile.objects.get(user_id=id)
