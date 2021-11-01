@@ -2,13 +2,6 @@ h1 {
     color: brown;
 }
 
-.aboutUs {
-    background-color: gold;
-    color: #11162c;
-    padding: 1.5%;
-}
-
-
 
 #app_overlay {
     top: 0;
@@ -23,7 +16,7 @@ h1 {
 .booking {
     margin-top: 6%;
     margin-bottom: 6%;
-    background: url('/static/photos/culture.jpg') no-repeat fixed 100% 100%;
+    background: url('/static/photos/Gate.jpg') no-repeat fixed 100% 100%;
     background-repeat: no-repeat;
     background-size: cover;
     margin: 0 auto;
