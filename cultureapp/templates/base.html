@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+
+    {% if title %}
+    <title>Culture and Fun - {{title}}</title>
+    {% else %}
+    <title> Culture and Fun </title>
+    {% endif %}
+
+</head>
+
+<body>
+    {% block content %} 
+    <h1>Culture and Fun</h1>
+    {%endblock%}
+</body>
+
+</html>
